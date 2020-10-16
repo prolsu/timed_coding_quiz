@@ -1,0 +1,43 @@
+body,
+html {
+    background-color: lightgray;
+    text-align: justify;
+    font-family: monospace;
+    font-size: 20px;
+}
+.container {
+    margin: 50px auto;
+    
+}
+
+#questions {
+    background-color: lightcoral;
+    height: 50px;
+}
+
+#choices {
+    background-color: rgb(57, 95, 221);
+    height: 50px;
+    height: 20%;
+}
+
+#results {
+    background-color: rgb(150, 238, 115);
+    height: 50px;
+}
+
+@media (max-width: 750px){
+    .container {
+        margin: 0 auto;
+        
+    }
+
+    
+}
+@media (max-width: 500px){
+    .container {
+        margin: 70px auto;
+    }
+
+    
+}
