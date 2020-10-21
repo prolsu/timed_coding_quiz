@@ -3,27 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timed Coding Quiz</title>
+    <title>Javascript: Basics Quiz</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
     <link rel="stylesheet" href="style.css">
+    
 
 </head>
 <body>
-    
-    <div class="container">
+      <!--  -->
+    <div class="container" style="background-color:whitesmoke; border-radius: 10px; border: coral solid;">
         <div class="row">
+            <div class="col-sm-12">
+                <header style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                    <h1>Javascript Basics</h1>
+                    <hr style="width: 50%;">    
+                    <h2>Timed Quiz</h2>
+                </header>
+            </div>
+        </div>
+
+        <main style="margin-top: 50px;">  <!-- WHEN USER CLICKS ON PLAY, DISPLAY: NONE SHOULD KICK IN -->  
+        <div style="text-align: center;"> 
+            <p >The following quiz will test your knowlege of this powerful language!</p>
+            <p>You will have 5 minutes to complete the test. Are you ready?...</p>
+            <button type="button" style="border-radius: 5px; background-color: darkslateblue; color: white;">READY!</button>
+        </div>
+        </main>
+
+        <div class="row" style="margin: 0 10px;"> <!--QUIESTIONS HERE-->
             <div id="questions" class="col-sm-12">
-                <p>Questions Here</p>
+                <p>QUESTIONS HERE</p>
             </div>
         </div><br>
-        <div class="row">
+        <div class="row" style="margin: 0 10px;">   <!--ALTERNATIVES-->
             <div id="choices" class="col-sm-12">
-                <p>Miltiple Answers Here</p>
+                
                 <ol>
-                <li><button id="choiceA" class="btn">related possible anser here</button></li>
-                <li><button id="choiceB" class="btn">related possible anser here</button></li>
-                <li><button id="choiceC" class="btn">related possible anser here</button></li>
-                <li><button id="choiceD" class="btn">related possible anser here</button></li>
+                <li><button id="choiceA" type="button">"related possible anser here</button></li>
+                <li><button id="choiceB" type="button">"related possible anser here</button></li>
+                <li><button id="choiceC" type="button">"related possible anser here</button></li>
+                <li><button id="choiceD" type="button">"related possible anser here</button></li>
+                <!--<li><input type="checkbox"></li>
+                <li><input type="button"></li>
+                <li><input type="tel"></li>-->
                 </ol>
             </div>
         </div><br>
@@ -31,7 +53,7 @@
             <div id="results" class="col-sm-12">
                 <p>Results Here</p>
             </div>
-        </div>
+        </div><br><hr>
     </div>
     <script src="script.js"></script>
 </body>
