@@ -24,3 +24,25 @@ timeEl.appendChild(imgEl);
 
 */
 
+document.getElementById("readyBtn").addEventListener("click", startQuiz);
+
+
+function startQuiz() {
+    var timeEl = document.querySelector("#clock");
+    var timer = 10*60;
+    
+   
+    var intervalID = setInterval(function() {
+        timer--;
+        timeEl.textContent = "Time left: "+ timer;
+        if(timer == 0){
+            clearInterval(intervalID);
+            //showResults(); RESULTS WILL GO HERE!!!
+        }
+        },1000);
+
+    
+    document.getElementById("welcomePage").setAttribute("style", "display: none;");
+    var firstQ = document.getElementById("myQ1").setAttribute("style", "");
+    document.getElementById("quizThisWay").appendChild(firstQ);
+}
