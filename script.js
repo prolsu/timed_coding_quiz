@@ -49,6 +49,9 @@ function startQuiz() {
             newText.textContent = "Time's Up!";
             document.querySelector("#timerEl").appendChild(newText);
         }
+        if(wrongAnswer){
+            timerS - 30;
+        }
         timeEl.textContent = "Time left: "+ timerM + ":" + timerS;
         
     },1000);
@@ -68,16 +71,24 @@ function startQuiz() {
     var clearMyQs = document.querySelectorAll(".outsideWrapper");
     var q = 0;
     var a = 0;
+
+    //var searchDark = document.querySelectorAll(".correct");
+    
+
+    for (var i = 0; i < searchLight.length; i++){
+        searchLight[i].addEventListener("click", rightAnswer);
+    };
+
     for (var i = 0; i < searchLight.length; i++){
         searchLight[i].addEventListener("click", rightAnswer);
     };
     
     function rightAnswer(){
-        //document.querySelector(".outsideWrapper").setAttribute("style", "display: none;");
         clearMyQs[a].setAttribute("style", "display: none;")
         a++
         searchMyQs[q].nextElementSibling.setAttribute("style", "display: ;");
         q++
+        
     };
        
     
