@@ -29,20 +29,67 @@ document.getElementById("readyBtn").addEventListener("click", startQuiz);
 
 function startQuiz() {
     var timeEl = document.querySelector("#clock");
-    var timer = 10*60;
-    
-   
-    var intervalID = setInterval(function() {
-        timer--;
-        timeEl.textContent = "Time left: "+ timer;
-        if(timer == 0){
-            clearInterval(intervalID);
-            //showResults(); RESULTS WILL GO HERE!!!
+    var timerM = 9;
+    var timerS = 60;
+        
+    var clockF = setInterval(function() {
+        timerS--;
+        if(timerS == 0){
+            timerS = 59;
+            timerM--
         }
-        },1000);
-
+        if(timerM == 0){
+            timerS = 0;
+            clearInterval(clockF);
+            //showResults(); RESULTS HERE????
+        }
+        if (timerM == 0 && timerS == 0){
+            document.querySelector("#clock").setAttribute("style", "display: none;");
+            var newText = document.createElement("h4");
+            newText.textContent = "Time's Up!";
+            document.querySelector("#timerEl").appendChild(newText);
+        }
+        timeEl.textContent = "Time left: "+ timerM + ":" + timerS;
+        
+    },1000);
     
     document.getElementById("welcomePage").setAttribute("style", "display: none;");
-    var firstQ = document.getElementById("myQ1").setAttribute("style", "");
-    document.getElementById("quizThisWay").appendChild(firstQ);
-}
+    document.getElementById("myQ1").setAttribute("style", "");
+
+    
+    
+
+    /*var firstQ = document.querySelector("#myQ1").childNodes[5].children;
+        firstQ[2].addEventListener("click",rightAnswer);*/
+
+    //var allQuestions = document.querySelector("#questionsAndAnswers").children;
+    var searchLight = document.querySelectorAll(".correct"); 
+    var searchMyQs = document.querySelectorAll(".outsideWrapper");
+    var clearMyQs = document.querySelectorAll(".outsideWrapper");
+    var q = 0;
+    var a = 0;
+    for (var i = 0; i < searchLight.length; i++){
+        searchLight[i].addEventListener("click", rightAnswer);
+    };
+    
+    function rightAnswer(){
+        //document.querySelector(".outsideWrapper").setAttribute("style", "display: none;");
+        clearMyQs[a].setAttribute("style", "display: none;")
+        a++
+        searchMyQs[q].nextElementSibling.setAttribute("style", "display: ;");
+        q++
+    };
+       
+    
+    function wrongAnswer(){
+       
+    };
+  
+    
+        
+    
+
+
+
+    
+};
