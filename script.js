@@ -1,106 +1,105 @@
-//EXAMPLE OF A TIMER REACHING 0 AND STOPPING... when time stops, a picture replaces the targeted area...
-
-/*
-var timeEl = document.querySelector("#questions");    
-var secondsLeft = 5;
-
-var intervalID = setInterval(function() {
-secondsLeft--;
-timeEl.textContent = secondsLeft + " seconds left till colorsplosion.";
-
-if (secondsLeft == 0) {
-clearInterval(intervalID);
-sendRandomPic();
-}}, 1000);
-
-function sendRandomPic(){
-timeEl.textContent = " ";
-
-var imgEl = document.createElement("img");
-
-imgEl.setAttribute("src", "https://static.toiimg.com/thumb/msid-67586673,width-800,height-600,resizemode-75,imgsize-3918697,pt-32,y_pad-40/67586673.jpg");
-timeEl.appendChild(imgEl);
-}
-
-*/
-
 document.getElementById("readyBtn").addEventListener("click", startQuiz);
-
 
 function startQuiz() {
     var timeEl = document.querySelector("#clock");
-    var timerM = 9;
-    var timerS = 60;
-        
+    var timerM = "10";
+    var timerS = "00";
+    timeEl.textContent = "Time left: " + timerM + ":" + timerS;
+    
+    //---TIMER GOES HERE 
     var clockF = setInterval(function() {
         timerS--;
-        if(timerS == 0){
+        
+        if(timerS == -1 && timerM > 0){
             timerS = 59;
             timerM--
         }
-        if(timerM == 0){
-            timerS = 0;
+        
+        if(timerS < 10){
+            timerS = "0" + timerS;
+        }
+
+        if(timerM == -1 ){
+            timerM = "0"
+            timerS = "00"
+            
+        }
+        
+        if(timerM == 2 && timerS == 0){
+            document.querySelector("#clock").setAttribute("style", "color: red;");
+        }
+        if(timerM == 0 && timerS == 0){
             clearInterval(clockF);
-            //showResults(); RESULTS HERE????
         }
-        if (timerM == 0 && timerS == 0){
-            document.querySelector("#clock").setAttribute("style", "display: none;");
-            var newText = document.createElement("h4");
-            newText.textContent = "Time's Up!";
-            document.querySelector("#timerEl").appendChild(newText);
-        }
-        if(wrongAnswer){
-            timerS - 30;
-        }
+        
         timeEl.textContent = "Time left: "+ timerM + ":" + timerS;
         
-    },1000);
+    },50);
     
+    
+    var theRightAnswers = document.querySelectorAll(".correct"); 
+    var theWrongAnswers = document.querySelectorAll(".choice");
+    var questionHolders = document.querySelectorAll(".outsideWrapper");
+    var currentQuestion = document.querySelectorAll(".outsideWrapper");
+    var q = 0;
+    var a = 0;
+    var myScore = 0;
+    
+
     document.getElementById("welcomePage").setAttribute("style", "display: none;");
     document.getElementById("myQ1").setAttribute("style", "");
 
-    
-    
-
-    /*var firstQ = document.querySelector("#myQ1").childNodes[5].children;
-        firstQ[2].addEventListener("click",rightAnswer);*/
-
-    //var allQuestions = document.querySelector("#questionsAndAnswers").children;
-    var searchLight = document.querySelectorAll(".correct"); 
-    var searchMyQs = document.querySelectorAll(".outsideWrapper");
-    var clearMyQs = document.querySelectorAll(".outsideWrapper");
-    var q = 0;
-    var a = 0;
-
-    //var searchDark = document.querySelectorAll(".correct");
-    
-
-    for (var i = 0; i < searchLight.length; i++){
-        searchLight[i].addEventListener("click", rightAnswer);
-    };
-
-    for (var i = 0; i < searchLight.length; i++){
-        searchLight[i].addEventListener("click", rightAnswer);
-    };
-    
-    function rightAnswer(){
-        clearMyQs[a].setAttribute("style", "display: none;")
-        a++
-        searchMyQs[q].nextElementSibling.setAttribute("style", "display: ;");
-        q++
-        
-    };
+    for (var i = 0; i < theRightAnswers.length; i++){
+       theRightAnswers[i].addEventListener("click", rightAnswer);
        
+    };
+    for (var i = 0; i < theWrongAnswers.length; i++){
+       theWrongAnswers[i].addEventListener("click", wrongAnswer);
+       
+    };
+
+    function rightAnswer(){
+        currentQuestion[a].setAttribute("style", "display: none;")
+        a++
+        if(q < 24){
+            questionHolders[q].nextElementSibling.setAttribute("style", "display: ;");
+            q++   
+        }
+        if (timerM == 0 && timerS == 0){
+            //document.querySelector("#clock").setAttribute("style", "color: red; display: ;");
+            document.querySelector("#results-here").setAttribute("style", "display: ;");
+            document.querySelectorAll("#outsideWrapper").setAttribute("style", "display: none;")
+        }//USE PRIOR IF TO INCLUDE USER'S TEST RESULTS WHEN TIME IS UP
+            
+        console.log("right!");
+        myScore = myScore + 4;
+        console.log(myScore);
+    };
+    
+    
     
     function wrongAnswer(){
-       
+        currentQuestion[a].setAttribute("style", "display: none;")
+        a++
+        if(q < 24){
+            questionHolders[q].nextElementSibling.setAttribute("style", "display: ;");
+            q++   
+        }
+        timerS = timerS - 30
+        if(timerS < 0 && timerM >= 0){
+            timerS = 60 + timerS
+            timerM--
+        }
+        if(timerS <= 30 ){
+            timerS -= timerS
+        }
+        if (timerM == 0 && timerS == 0){
+            document.querySelector("#clock").setAttribute("style", "color: red; display: ;");
+            document.querySelector("#results-here").setAttribute("style", "display: ;");
+            document.querySelectorAll("#outsideWrapper").setAttribute("style", "display: none;")
+        }//USE PRIOR IF TO INCLUDE USER'S TEST RESULTS WHEN TIME IS UP
+        
+        console.log("wrong!");
     };
   
-    
-        
-    
-
-
-
-    
 };

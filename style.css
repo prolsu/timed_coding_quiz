@@ -1,7 +1,7 @@
 body,
 html {
     background-color: lightgray;
-    text-align: justify;
+    
     font-family: monospace;
     font-size: 15px;
 }
@@ -9,6 +9,9 @@ html {
     margin: 50px auto;
     position: relative;
     
+}
+header {
+    margin-top: 50px;
 }
 
 #questionsAndChoices {
@@ -18,17 +21,15 @@ html {
 }
 
 
-
-#choiceA,
-#choiceB,
-#choiceC,
-#choiceD {
+.choice,
+.correct {
+    
     background-color: rgb(57, 95, 221);
     border-radius: 10px;
-    height: 50px;
+    height: 55px;
     margin-bottom: 5px;
     cursor: pointer;
-   
+    width: auto;
 }
 
 
@@ -38,7 +39,6 @@ html {
     right: 10px;
     bottom: 0;
     text-align: right;
-    
 }
 
 #results {
@@ -53,13 +53,10 @@ html {
         margin: 0 auto;
         
     }
-
-    
 }
-@media (max-width: 500px){
-    .container {
-        margin: 70px auto;
-    }
 
-    
+@media (max-width: 414px){
+    .container {
+        margin: 0;
+    }
 }
