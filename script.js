@@ -26,9 +26,7 @@ function startQuiz() {
         
         if(timerM == 0 && timerS == 0){
             clearInterval(clockF);
-            document.querySelector("#results-here").setAttribute("style", "display: ;");
-            document.querySelector("#questionsAndChoices").setAttribute("style", "display: none;")
-            myScoreIs.textContent = myScore
+            showMyResuts();
         }
         
         timeEl.textContent = "Time left: "+ timerM + ":" + timerS;
