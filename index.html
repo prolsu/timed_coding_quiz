@@ -11,7 +11,7 @@
 </head>
 <body>
       <!--  -->
-    <div class="container" style="background-color:whitesmoke; border-radius: 10px; border: coral solid; height: 600px;">
+    <div class="container" style="background-color:whitesmoke; border-radius: 20px; border: coral solid; height: 625px;">
         <div class="row">
             <div class="col-sm-12">
                 <header style="text-align: center; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
@@ -34,22 +34,26 @@
 
             <div class="row">
                 <div class="col-sm-12" id="results-here" style="display: none;">
-                    <h1 style="text-align: center;">SOME TEXT HERE</h1>
+                    <h1 style="text-align: center;">Your Score</h1><br>
+                    <p id="myScoreIs" style="font-size: xx-large;"></p>
+                    <h4 id="myScoreIs" style="text-align: center; font-size: 1000px;"></h4><br>
+                    <input type="text"><br>
+                    <input type="submit" value="Save My Score">
                 </div>
             </div>
 
-        <!--QUESSTIONS AND ALTERNATIVES-->
-        <div class="row" id="questionsAndChoices" class="col-sm-12 myQ1" style="margin: 10px 10px 0;">  
-            <!-- style="display: none;" -->
+        
+        <div class="row" id="questionsAndChoices" class="col-sm-12" >  
+           
             
             <div class="outsideWrapper" id="myQ1" style="display: none;">
             <h4>Inside which HTML element do we put the JavaScript?</h4>
             <hr style="width: 100%;">
                 <ol>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;scripting&gt;</button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;javascript&gt; </button></li>
-                <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">&lt;script&gt; </button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;js&gt; </button></li>
+                <li><button class="choice" type="button" >&lt;scripting&gt;</button></li>
+                <li><button class="choice" type="button" >&lt;javascript&gt; </button></li>
+                <li><button class="correct" class="choice" type="button" >&lt;script&gt; </button></li>
+                <li><button class="choice" type="button" >&lt;js&gt; </button></li>
                 </ol>
             </div>
 
@@ -57,10 +61,10 @@
             <h4>What is the correct JavaScript syntax to change the content of the HTML element below?<br>&lt;p id="demo"&gt;This is a demonstration.&lt;/p&gt;</h4>
             <hr style="width: 100%;">
                 <ol>
-                <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">document.getElementById("p").innerHTML = "Hello World!";</button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">#demo.innerHTML = "Hello World!";</button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">document.getElement("P").innerHTML = "Hello World!";</button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">document.getElementById("demo").innerHTML = "Hello World!";</button></li>
+                <li><button class="choice" class="choice" type="button" >document.getElementById("p").innerHTML = "Hello World!";</button></li>
+                <li><button class="choice" type="button" >#demo.innerHTML = "Hello World!";</button></li>
+                <li><button class="choice" type="button" >document.getElement("P").innerHTML = "Hello World!";</button></li>
+                <li><button class="correct" type="button" >document.getElementById("demo").innerHTML = "Hello World!";</button></li>
                 </ol>
             </div>
 
@@ -68,10 +72,10 @@
             <h4>Where is the correct place to insert a JavaScript?</h4>
             <hr style="width: 100%;">
                 <ol>
-                <li><button class="choice" type="button" style="color: white; width: 525px;"> The &lt;head&gt; section  </button></li>
-                <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;"> Both the &lt;head&gt; and the &lt;body&gt; section are correct  </button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;">  The &lt;body&gt; section</button></li>
-                <li><button class="choice" type="button" style="color: white; width: 525px;"> Outside the &lt;html&gt; tags </button></li>
+                <li><button class="choice" type="button" > The &lt;head&gt; section  </button></li>
+                <li><button class="correct" class="choice" type="button" > Both the &lt;head&gt; and the &lt;body&gt; section are correct  </button></li>
+                <li><button class="choice" type="button" >  The &lt;body&gt; section</button></li>
+                <li><button class="choice" type="button" > Outside the &lt;html&gt; tags </button></li>
                 </ol>
             </div>
 
@@ -79,10 +83,10 @@
                 <h4>What is the correct syntax for referring to an external script called "xxx.js"?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;script href="xxx.js"&gt;</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;script name="xxx.js"&gt;</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">&lt;script src="xxx.js"&gt;</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;script doc="xxx.js"&gt;</button></li>
+                    <li><button class="choice" type="button" >&lt;script href="xxx.js"&gt;</button></li>
+                    <li><button class="choice" type="button" >&lt;script name="xxx.js"&gt;</button></li>
+                    <li><button class="correct" class="choice" type="button" >&lt;script src="xxx.js"&gt;</button></li>
+                    <li><button class="choice" type="button" >&lt;script doc="xxx.js"&gt;</button></li>
                     </ol>
             </div>
 
@@ -90,10 +94,10 @@
                 <h4>The external JavaScript file must contain the &lt;script&gt; tag.</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">False</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Depends</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">True</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Sometimes</button></li>
+                    <li><button class="correct" class="choice" type="button" >False</button></li>
+                    <li><button class="choice" type="button" >Depends</button></li>
+                    <li><button class="choice" type="button" >True</button></li>
+                    <li><button class="choice" type="button" >Sometimes</button></li>
                     </ol>
             </div>
 
@@ -101,10 +105,10 @@
                 <h4>How do you write "Hello World" in an alert box?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">alert("Hello World!")</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">alertBox("Hello World!")</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">msg("Hello World!")</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">msgBox("Hello World!")</button></li>
+                    <li><button class="correct" class="choice" type="button" >alert("Hello World!")</button></li>
+                    <li><button class="choice" type="button" >alertBox("Hello World!")</button></li>
+                    <li><button class="choice" type="button" >msg("Hello World!")</button></li>
+                    <li><button class="choice" type="button" >msgBox("Hello World!")</button></li>
                     </ol>
             </div>
 
@@ -112,10 +116,10 @@
                 <h4>How do you create a function in JavaScript?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">function myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">function = myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">function:myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">function.heyFunction()</button></li>
+                    <li><button class="correct" class="choice" type="button" >function myFunction()</button></li>
+                    <li><button class="choice" type="button" >function = myFunction()</button></li>
+                    <li><button class="choice" type="button" >function:myFunction()</button></li>
+                    <li><button class="choice" type="button" >function.heyFunction()</button></li>
                     </ol>
             </div>
 
@@ -123,10 +127,10 @@
                 <h4>How do you call a function named "myFunction"?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">call function myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">call myFunction()</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">call myFunction().phone</li>
+                    <li><button class="correct" class="choice" type="button" >myFunction()</button></li>
+                    <li><button class="choice" type="button" >call function myFunction()</button></li>
+                    <li><button class="choice" type="button" >call myFunction()</button></li>
+                    <li><button class="choice" type="button" >call myFunction().phone</li>
                     </ol>
             </div>
 
@@ -134,10 +138,10 @@
                 <h4>How to write an IF statement in JavaScript?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if i = 5</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">if (i == 5)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if i == 5 then</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if i = 5 then</button></li>
+                    <li><button class="choice" type="button" >if i = 5</button></li>
+                    <li><button class="correct" class="choice" type="button" >if (i == 5)</button></li>
+                    <li><button class="choice" type="button" >if i == 5 then</button></li>
+                    <li><button class="choice" type="button" >if i = 5 then</button></li>
                     </ol>
             </div>
 
@@ -145,10 +149,10 @@
                 <h4>How to write an IF statement for executing some code if "i" is NOT equal to 5?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if i &lt; &gt; 5</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">if (i != 5)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if (i &lt; &gt; 5)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">if i =! 5 then</button></li>
+                    <li><button class="choice" type="button" >if i &lt; &gt; 5</button></li>
+                    <li><button class="correct" class="choice" type="button" >if (i != 5)</button></li>
+                    <li><button class="choice" type="button" >if (i &lt; &gt; 5)</button></li>
+                    <li><button class="choice" type="button" >if i =! 5 then</button></li>
                     </ol>
             </div>
 
@@ -156,10 +160,10 @@
                 <h4>How does a WHILE loop start?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">while i = 1 to 10</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">while (i &lt;= 10; i++)</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">while (i &lt;=10)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">When I click on 'Start' </button></li>
+                    <li><button class="choice" type="button" >while i = 1 to 10</button></li>
+                    <li><button class="choice" type="button" >while (i &lt;= 10; i++)</button></li>
+                    <li><button class="correct" class="choice" type="button" >while (i &lt;=10)</button></li>
+                    <li><button class="choice" type="button" >When I click on 'Start' </button></li>
                     </ol>
             </div>
 
@@ -167,10 +171,10 @@
                 <h4>How does a FOR loop start?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">for i = 1 to 5</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">for (i = 0; i&lt;=5)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">for (i &lt;= 5; i++)</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">for (i = 0; i &lt;= 5; i++)</button></li>
+                    <li><button class="choice" type="button" >for i = 1 to 5</button></li>
+                    <li><button class="choice" type="button" >for (i = 0; i&lt;=5)</button></li>
+                    <li><button class="choice" type="button" >for (i &lt;= 5; i++)</button></li>
+                    <li><button class="correct" class="choice" type="button" >for (i = 0; i &lt;= 5; i++)</button></li>
                     </ol>
             </div>
 
@@ -178,10 +182,10 @@
                 <h4>How can you add a comment in a JavaScript?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;!--This is a comment--&gt;</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">'This is a comment</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">//This is a comment</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">-m "This is a comment"</button></li>
+                    <li><button class="choice" type="button" >&lt;!--This is a comment--&gt;</button></li>
+                    <li><button class="choice" type="button" >'This is a comment</button></li>
+                    <li><button class="correct" class="choice" type="button" >//This is a comment</button></li>
+                    <li><button class="choice" type="button" >-m "This is a comment"</button></li>
                     </ol>
             </div>
 
@@ -189,10 +193,10 @@
                 <h4>How to insert a comment that has more than one line?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">//This comment has<br>more than one line//</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">&lt;!--This comment has<br>more than one line--&gt;</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">/*This comment has<br>more than one line*/</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">'This comment has<br>more than one line'</button></li>
+                    <li><button class="choice" type="button" >//This comment has<br>more than one line//</button></li>
+                    <li><button class="choice" type="button" >&lt;!--This comment has<br>more than one line--&gt;</button></li>
+                    <li><button class="correct" class="choice" type="button" >/*This comment has<br>more than one line*/</button></li>
+                    <li><button class="choice" type="button" >'This comment has<br>more than one line'</button></li>
                     </ol>
             </div>
 
@@ -200,10 +204,10 @@
                 <h4>What is the correct way to write a JavaScript array?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">var colors = ["red", "green", "blue"]</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">var colors = "red", "green", "blue"</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">var colors = (1:"red", 2:"green", 3:"blue")</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")</button></li>
+                    <li><button class="correct" class="choice" type="button" >var colors = ["red", "green", "blue"]</button></li>
+                    <li><button class="choice" type="button" >var colors = "red", "green", "blue"</button></li>
+                    <li><button class="choice" type="button" >var colors = (1:"red", 2:"green", 3:"blue")</button></li>
+                    <li><button class="choice" type="button" >var colors = 1 = ("red"), 2 = ("green"), 3 = ("blue")</button></li>
                     </ol>
             </div>
 
@@ -211,10 +215,10 @@
                 <h4>How do you round the number 7.25, to the nearest integer?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Math.rnd(7.25)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">rnd(7.25)</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">Math.round(7.25)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">round(7.25)</button></li>
+                    <li><button class="choice" type="button" >Math.rnd(7.25)</button></li>
+                    <li><button class="choice" type="button" >rnd(7.25)</button></li>
+                    <li><button class="correct" class="choice" type="button" >Math.round(7.25)</button></li>
+                    <li><button class="choice" type="button" >round(7.25)</button></li>
                     </ol>
             </div>
 
@@ -222,10 +226,10 @@
                 <h4>How do you find the number with the highest value of x and y?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Math.ceil(x,y)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">ceil(x,y)</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">top(x,y)</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">Math.max(x,y)</button></li>
+                    <li><button class="choice" type="button" >Math.ceil(x,y)</button></li>
+                    <li><button class="choice" type="button" >ceil(x,y)</button></li>
+                    <li><button class="choice" type="button" >top(x,y)</button></li>
+                    <li><button class="correct" class="choice" type="button" >Math.max(x,y)</button></li>
                     </ol>
             </div>
 
@@ -233,8 +237,8 @@
                 <h4>What is the correct JavaScript syntax for opening a new window called "w2" ?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">w2 = window.open("https://wwwgoogle.com");</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">w2 = window.new("https://wwwgoogle.com");</button></li>
+                    <li><button class="choice" type="button" >w2 = window.open("https://wwwgoogle.com");</button></li>
+                    <li><button class="correct" class="choice" type="button" >w2 = window.new("https://wwwgoogle.com");</button></li>
                     </ol>
             </div>
 
@@ -242,8 +246,8 @@
                 <h4>JavaScript is the same as Java.</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">False</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">True</button></li>
+                    <li><button class="correct" class="choice" type="button" >False</button></li>
+                    <li><button class="choice" type="button" >True</button></li>
                     </ol>
             </div>
 
@@ -251,9 +255,9 @@
                 <h4>How can you detect the client's browser name?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">browser.name</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">navigator.appName</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">client.navName</button></li>
+                    <li><button class="choice" type="button" >browser.name</button></li>
+                    <li><button class="correct" class="choice" type="button" >navigator.appName</button></li>
+                    <li><button class="choice" type="button" >client.navName</button></li>
                     </ol>
             </div>
 
@@ -261,10 +265,10 @@
                 <h4>Which event occurs when the user clicks on an HTML element?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">onmouseclick</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">onmouseover</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">onclick</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">onchange</button></li>
+                    <li><button class="choice" type="button" >onmouseclick</button></li>
+                    <li><button class="choice" type="button" >onmouseover</button></li>
+                    <li><button class="correct" class="choice" type="button" >onclick</button></li>
+                    <li><button class="choice" type="button" >onchange</button></li>
                     </ol>
             </div>
 
@@ -272,10 +276,10 @@
                 <h4>How do you declare a JavaScript variable?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">v carName;</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">variable carName;</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">var carName;</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">varies carName;</button></li>
+                    <li><button class="choice" type="button" >v carName;</button></li>
+                    <li><button class="choice" type="button" >variable carName;</button></li>
+                    <li><button class="correct" class="choice" type="button" >var carName;</button></li>
+                    <li><button class="choice" type="button" >varies carName;</button></li>
                     </ol>
             </div>
 
@@ -283,10 +287,10 @@
                 <h4>Which operator is used to assign a value to a variable?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px; ">*</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">-</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">=</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">x</button></li>
+                    <li><button class="choice" type="button" style="color: white;  ">*</button></li>
+                    <li><button class="choice" type="button" >-</button></li>
+                    <li><button class="correct" class="choice" type="button" >=</button></li>
+                    <li><button class="choice" type="button" >x</button></li>
                     </ol>
             </div>
 
@@ -294,10 +298,10 @@
                 <h4>What will the following code return: Boolean(10 > 9)</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">True</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">NaN</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">False</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Boo</button></li>
+                    <li><button class="correct" class="choice" type="button" >True</button></li>
+                    <li><button class="choice" type="button" >NaN</button></li>
+                    <li><button class="choice" type="button" >False</button></li>
+                    <li><button class="choice" type="button" >Boo</button></li>
                     </ol>
             </div>
 
@@ -305,20 +309,16 @@
                 <h4>Is JavaScript case-sensitive?</h4>
                 <hr style="width: 100%;">
                     <ol>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">No</button></li>
-                    <li><button class="correct" class="choice" type="button" style="color: white; width: 525px;">Yes</button></li>
-                    <li><button class="choice" type="button" style="color: white; width: 525px;">Sometimes</button></li>
+                    <li><button class="choice" type="button" >No</button></li>
+                    <li><button class="correct" class="choice" type="button" >Yes</button></li>
+                    <li><button class="choice" type="button" >Sometimes</button></li>
                     </ol>
             </div>
             
         </div>
         
         <!--RESULTS WILL APPEAR HERE-->
-        <div class="row" style="display: none;">
-            <div id="results" class="col-sm-12">
-                <p>Results Here</p>
-            </div>
-        </div><br>
+        
         <div class="row">
             <div class="col-sm-12" id="timerEl">
                 <h4 id="clock"> </h4>

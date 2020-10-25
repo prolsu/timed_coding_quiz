@@ -10,7 +10,7 @@ function startQuiz() {
     var clockF = setInterval(function() {
         timerS--;
         
-        if(timerS == -1 && timerM > 0){
+        if(timerS < 0 && timerM > 0){
             timerS = 59;
             timerM--
         }
@@ -22,21 +22,20 @@ function startQuiz() {
         if(timerM == -1 ){
             timerM = "0"
             timerS = "00"
-            
         }
         
-        if(timerM == 2 && timerS == 0){
-            document.querySelector("#clock").setAttribute("style", "color: red;");
-        }
         if(timerM == 0 && timerS == 0){
             clearInterval(clockF);
+            document.querySelector("#results-here").setAttribute("style", "display: ;");
+            document.querySelector("#questionsAndChoices").setAttribute("style", "display: none;")
+            myScoreIs.textContent = myScore
         }
         
         timeEl.textContent = "Time left: "+ timerM + ":" + timerS;
         
-    },50);
+    },1000);
     
-    
+    var myScoreIs = document.querySelector("#myScoreIs");
     var theRightAnswers = document.querySelectorAll(".correct"); 
     var theWrongAnswers = document.querySelectorAll(".choice");
     var questionHolders = document.querySelectorAll(".outsideWrapper");
@@ -44,7 +43,6 @@ function startQuiz() {
     var q = 0;
     var a = 0;
     var myScore = 0;
-    
 
     document.getElementById("welcomePage").setAttribute("style", "display: none;");
     document.getElementById("myQ1").setAttribute("style", "");
@@ -57,6 +55,11 @@ function startQuiz() {
        theWrongAnswers[i].addEventListener("click", wrongAnswer);
        
     };
+    function showMyResuts(){
+        document.querySelector("#results-here").setAttribute("style", "display: ;");
+        document.querySelector("#questionsAndChoices").setAttribute("style", "display: none;");
+        myScoreIs.textContent = myScore
+    }
 
     function rightAnswer(){
         currentQuestion[a].setAttribute("style", "display: none;")
@@ -65,19 +68,19 @@ function startQuiz() {
             questionHolders[q].nextElementSibling.setAttribute("style", "display: ;");
             q++   
         }
+        if(q == 24){
+            clearInterval(clockF)
+            showMyResuts();
+        }
         if (timerM == 0 && timerS == 0){
-            //document.querySelector("#clock").setAttribute("style", "color: red; display: ;");
-            document.querySelector("#results-here").setAttribute("style", "display: ;");
-            document.querySelectorAll("#outsideWrapper").setAttribute("style", "display: none;")
-        }//USE PRIOR IF TO INCLUDE USER'S TEST RESULTS WHEN TIME IS UP
+            showMyResuts();
+        }
             
         console.log("right!");
         myScore = myScore + 4;
         console.log(myScore);
     };
-    
-    
-    
+
     function wrongAnswer(){
         currentQuestion[a].setAttribute("style", "display: none;")
         a++
@@ -85,21 +88,20 @@ function startQuiz() {
             questionHolders[q].nextElementSibling.setAttribute("style", "display: ;");
             q++   
         }
-        timerS = timerS - 30
-        if(timerS < 0 && timerM >= 0){
-            timerS = 60 + timerS
-            timerM--
+        if(q == 24){
+            clearInterval(clockF)
+            showMyResuts();
         }
-        if(timerS <= 30 ){
-            timerS -= timerS
+        timerS = timerS - 30
+        if(timerS < 0 ){
+            timerM--
+            timerS = 60 + timerS
         }
         if (timerM == 0 && timerS == 0){
-            document.querySelector("#clock").setAttribute("style", "color: red; display: ;");
-            document.querySelector("#results-here").setAttribute("style", "display: ;");
-            document.querySelectorAll("#outsideWrapper").setAttribute("style", "display: none;")
-        }//USE PRIOR IF TO INCLUDE USER'S TEST RESULTS WHEN TIME IS UP
+            showMyResuts();
+        }
         
         console.log("wrong!");
     };
-  
+    
 };

@@ -1,7 +1,6 @@
 body,
 html {
     background-color: lightgray;
-    
     font-family: monospace;
     font-size: 15px;
 }
@@ -10,26 +9,38 @@ html {
     position: relative;
     
 }
+button {
+    color: white;
+}
+#outsideWrapper {
+  padding-left: 50px;  
+}
 header {
     margin-top: 50px;
 }
-
+#results-here{
+    margin-top: 50px;
+    text-align: center;
+}
 #questionsAndChoices {
-    /*background-color: lightcoral;*/
     border-radius: 10px;
     height: 50px;
+    margin: 0 25%;
 }
-
-
+li{
+    color: whitesmoke;
+}
+input {
+    margin-bottom: 10px;
+}
 .choice,
 .correct {
-    
+    width: 525px;
     background-color: rgb(57, 95, 221);
     border-radius: 10px;
     height: 55px;
     margin-bottom: 5px;
     cursor: pointer;
-    width: auto;
 }
 
 
@@ -41,22 +52,27 @@ header {
     text-align: right;
 }
 
-#results {
-    background-color: rgb(150, 238, 115);
-    border-radius: 10px;
-    bottom: 25px;
-    position: absolute;    
-}
+
 
 @media (max-width: 750px){
-    .container {
-        margin: 0 auto;
+    .container,
+    #questionsAndChoices,
+    #outsideWrapper,
+    .choice {
         
+        margin-left: 0;
     }
-}
+    
+    .choice,
+    .correct {
+        height: 65px;
+        width: 350px;
+        margin-left: -25px;
+        font-size: 15px;
+    }
 
-@media (max-width: 414px){
-    .container {
-        margin: 0;
+    h4 {
+        margin-top: 1px;
+        font-size: 15px;
     }
 }
